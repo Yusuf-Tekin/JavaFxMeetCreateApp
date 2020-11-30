@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+   <children>
+      <Pane prefHeight="421.0" prefWidth="291.0" style="-fx-background-color: ea502f;">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="163.0" layoutX="75.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/meeting.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="29.0" layoutY="339.0" prefHeight="33.0" prefWidth="234.0" text="Toplantı Uygulaması" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Candara" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="85.0" prefHeight="17.0" prefWidth="90.0" text="Ekip Oluşturun" textFill="#ffd7d7" underline="true" />
+            <Label layoutX="73.0" layoutY="116.0" prefHeight="17.0" prefWidth="90.0" text="Üye Ekleyin" textFill="#ffd7d7" underline="true" />
+            <Label layoutX="72.0" layoutY="143.0" prefHeight="17.0" prefWidth="197.0" text="Üyerler ile toplantı zamanı ayarlayın." textFill="#ffd7d7" underline="true" />
+            <Label layoutX="42.0" layoutY="47.0" text="Yeni Toplantılar Oluşturun" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="276.0" prefHeight="421.0" prefWidth="389.0" style="-fx-background-color: e0654c;">
+         <children>
+            <Separator layoutX="-3.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="0.0" />
+            <ImageView fx:id="closebutton" fitHeight="33.0" fitWidth="28.0" layoutX="337.0" layoutY="14.0" onMouseClicked="#AppClose" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@image/close.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="95.0" layoutY="42.0" text="Toplantı Oluştur" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="97.0" text="Başlık Belirtin *" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="132.0" prefHeight="17.0" prefWidth="96.0" text="Tarih Belirtin *" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="MeetStatusButton" layoutX="130.0" layoutY="205.0" onMousePressed="#ToggleAction" text=" " toggleColor="#5cb85c" toggleLineColor="#5cb85c" unToggleColor="#5bc0de" unToggleLineColor="#5bc0de" />
+            <Label layoutX="70.0" layoutY="224.0" prefHeight="17.0" prefWidth="53.0" text="Durum " textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="ToggleStatus" layoutX="186.0" layoutY="223.0" text="Herkes Girebilir." textFill="WHITE">
+               <font>
+                  <Font name="DokChampa" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="MeetHead" focusColor="WHITE" layoutX="145.0" layoutY="93.0" prefHeight="26.0" prefWidth="190.0" promptText="Zorunlu" unFocusColor="#752e2e" />
+            <JFXDatePicker fx:id="MeetDate" defaultColor="BLACK" editable="false" layoutX="145.0" layoutY="127.0" prefHeight="29.0" prefWidth="190.0" promptText="Zorunlu" />
+            <Label layoutX="47.0" layoutY="173.0" prefHeight="17.0" prefWidth="96.0" text="Saat Belirtin *" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <JFXTimePicker fx:id="MeetTime" defaultColor="BLACK" layoutX="145.0" layoutY="165.0" prefHeight="29.0" prefWidth="190.0" />
+            <JFXButton fx:id="OkButton" layoutX="140.0" layoutY="358.0" onAction="#OkButtonAction" prefHeight="33.0" prefWidth="123.0" style="-fx-background-radius: 24px; -fx-background-color: #0275d8;" text="Oluştur" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXSpinner fx:id="Spinner" layoutX="275.0" layoutY="358.0" prefHeight="33.0" prefWidth="28.0" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
